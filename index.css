@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  background-color: black;
+  height: 550px;
+  width: 900px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  grid-template-areas:
+    "answer answer"
+    "calculate number";
+  gap: 10px;
+  padding: 20px;
+  border-radius: 30px;
+  color: white;
+}
+
+div.answer {
+  background-color: black;
+  grid-area: answer;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: end;
+  justify-items: end;
+  padding: 0 20px 20px 20px;
+  color: white;
+}
+
+/*calculate*/
+
+div.calculate {
+  background-color: aquamarine;
+  height: 350px;
+  grid-area: calculate;
+  grid-template-columns: repeat(6, 1fr);
+  display: grid;
+  gap: 5px;
+  text-align: center;
+  padding-right: 5px;
+}
+
+.calculate > div {
+  background-color: #2a2a2a;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  font-size: 20px;
+}
